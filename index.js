@@ -9,9 +9,13 @@ const app = express()
 app.use(parser.json())
 app.use(cors())
 
-// app.get("/", (req, res) => {
-//     res.redirect()
-// })
+app.get("/", (req, res) => {
+    res.redirect("/photos")
+})
+
+app.use("/collections", require("../pinstagram500-api/db/routes/collections"))
+app.use("/photos", require("../pinstagram500-api/db/routes/photos"))
+app.use("/user", require("../pinstagram500-api/db/routes/user"))
 
 app.set("port")
 
