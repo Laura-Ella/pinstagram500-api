@@ -1,36 +1,38 @@
+const Collection = require("../models/Collection")
+
 module.exports = {
 index: (req, res) => {
-    Person.find({})
+    Collection.find({})
       .then(person =>
         res.json(person)
       )
   },
   show: (req, res) => {
-    Person.find({ id: req.params.id })
+    Collection.find({ id: req.params.id })
       .then(person =>
         res.json(person)
       )
   },
   showName: (req, res) => {
-    Person.find({ name: req.params.name })
+    Collection.find({ name: req.params.name })
       .then(person =>
         res.json(person)
       )
   },
   create: (req, res) => {
-    Person.create(req.body)
+    Collection.create(req.body)
       .then(person =>
         res.json(person)
       )
   },
-  edit: (req, res) => {
-    Person.findOneAndUpdate({ _id: req.params.id }, 
+  update: (req, res) => {
+    Collection.findOneAndUpdate({ _id: req.params.id }, 
       {$set: {"name" : req.body.name} } )
       .then(person =>
         res.json(person)
       )},
   delete: (req, res) => {
-    Person.findOneAndDelete({ _id: req.params.id }, req.body)
+    Collection.findOneAndDelete({ _id: req.params.id }, req.body)
       .then(person =>
         res.json(person)
       )

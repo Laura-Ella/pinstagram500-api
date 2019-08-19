@@ -1,38 +1,38 @@
-const Photos = require("../models/Photos")
+const User = require("../models/User")
 
 module.exports = {
     index: (req, res) => {
-        Photos.find({})
+        User.find({})
           .then(person =>
             res.json(person)
           )
       },
       show: (req, res) => {
-        Photos.find({ id: req.params.id })
+        User.find({ id: req.params.id })
           .then(person =>
             res.json(person)
           )
       },
       showName: (req, res) => {
-        Photos.find({ name: req.params.name })
+        User.find({ name: req.params.name })
           .then(person =>
             res.json(person)
           )
       },
       create: (req, res) => {
-        Photos.create(req.body)
+        User.create(req.body)
           .then(person =>
             res.json(person)
           )
       },
       update: (req, res) => {
-        Photos.findOneAndUpdate({ _id: req.params.id }, 
+        User.findOneAndUpdate({ _id: req.params.id }, 
           {$set: {name : req.body.name} } )
           .then(person =>
             res.json(person)
           )},
       delete: (req, res) => {
-        Photos.findOneAndDelete({ _id: req.params.id }, req.body)
+        User.findOneAndDelete({ _id: req.params.id }, req.body)
           .then(person =>
             res.json(person)
           )
