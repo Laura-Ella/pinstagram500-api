@@ -1,0 +1,10 @@
+const express = require("express")
+const router = express.Router()
+const model1 = require("path")
+const model2 = require("path2")
+
+router.get("/home", collectionController.index)
+router.get("/collections", collectionController.show)
+router.post("/collections", collectionController.create)
+router.put("/collections/:id", collectionController.edit)
+router.delete("/collections/:id", collectionController.delete)
