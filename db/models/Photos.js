@@ -19,7 +19,8 @@ let PhotoSchema = new Schema ({
     user: {UserSchema},
     url: {
         raw: String   
-    }
+    },
+    tag: String
 });
 
 
