@@ -6,10 +6,9 @@ app.use(parser.json())
 app.use(cors())
 
 
-
-app.use("/collection", require("../pinstagram500-api/db/routes/collections"))
-app.use("/", require("../pinstagram500-api/db/routes/photos"))
-// app.use("/user", require("../pinstagram500-api/db/routes/user"))
+app.use("/collection", require("./db/routes/collections"))
+app.use("/", require("./db/routes/photos"))
+// app.use("/user", require("./"))
 
 app.set("port", process.env.PORT || 8080);
 
