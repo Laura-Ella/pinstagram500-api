@@ -1,7 +1,14 @@
 const mongoose = require("mongoose");
 mongoose.Promise = Promise;
+let mongoURI = "";
 
-mongoose.connect("mongodb://localhost/pinstagram500", {
+if (process.env.NODE_ENV === "production") {
+    mongoURI = process.env.DB_URL;
+  } else {
+    mongoURI = "mongodb://localhost/pinstagram500";
+  }
+
+mongoose.connect("mongoURI", {
     useNewUrlParser: true
 })
 

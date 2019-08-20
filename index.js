@@ -11,7 +11,8 @@ app.use("/collection", require("../pinstagram500-api/db/routes/collections"))
 app.use("/", require("../pinstagram500-api/db/routes/photos"))
 // app.use("/user", require("../pinstagram500-api/db/routes/user"))
 
+app.set("port", process.env.PORT || 8080);
 
-const PORT = process.env.PORT || 3000
-
-app.listen(PORT,() => console.info(`${PORT}`))
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+});
