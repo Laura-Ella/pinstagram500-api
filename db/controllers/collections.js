@@ -13,6 +13,10 @@ module.exports = {
         res.json(collection)
       )
   },
+  show: function(req, res) {
+    Collection.findById(req.params.id)
+      .then(collection => res.json(collection));   
+  },
   update: (req, res) => {
     Collection.findOneAndUpdate({ _id: req.params.id },
       { $set: { name: req.body.name } })
