@@ -13,19 +13,19 @@ module.exports = {
         res.json(collection)
       )
   },
-  show: function(req, res) {
-    Collection.findById(req.params.id)
+  show: (req, res) => {
+    Collection.findById({_id: req.params.id})
       .then(collection => res.json(collection));   
   },
   update: (req, res) => {
-    Collection.findOneAndUpdate({ _id: req.params.id },
-      { $set: { name: req.body.name } })
+    Collection.updateOne({ _id: req.params.id },
+      req.body)
       .then(collection =>
         res.json(collection)
       )
   },
   delete: (req, res) => {
-    Collection.findOneAndDelete({ _id: req.params.id }, req.body)
+    Collection.deleteOne({ _id: req.params.id })
       .then(collection =>
         res.json(collection)
       )
