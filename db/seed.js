@@ -17,7 +17,7 @@ let newPhotos = photos.map(photo => {
 });
 
 Photos.deleteMany({}).then(newPhoto => {
-  Photos.collection.insert(newPhotos).then(newPhoto => [
+  Photos.collection.insertMany(newPhotos).then(newPhoto => [
     console.log(newPhoto)
   ])
 })
