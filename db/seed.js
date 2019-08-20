@@ -22,26 +22,14 @@ Photos.deleteMany({}).then(newPhoto => {
   ])
 })
 
-// Photos.deleteMany({})
-//   .then(() => {
-//     Photos.create(photos)
-//       .then((photo) => {
-//         console.log(photo)
-//         process.exit()
-//       })
-//   })
-//   .catch((err) => {
-//     console.log(err)
-//   })
-
-  // Collection.deleteMany({})
-  // .then(() => {
-  //   Collection.create(collections)
-  //     .then((collection) => {
-  //       console.log(collection)
-  //       process.exit()
-  //     })
-  // })
-  // .catch((err) => {
-  //   console.log(err)
-  // })
+  Collection.deleteMany({})
+  .then(() => {
+    Collection.create(collections)
+      .then((collection) => {
+        console.log(collection)
+        process.exit()
+      })
+  })
+  .catch((err) => {
+    console.log(err)
+  })
