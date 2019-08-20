@@ -19,7 +19,7 @@ module.exports = {
     },
       update: (req, res) => {
         Photos.findOneAndUpdate( 
-          {_id : req.params.id},
+          {id : req.params.id},
           req.body,
 
           ).then(photos =>
