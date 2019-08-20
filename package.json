@@ -26,5 +26,3 @@
     "mongoose": "^5.6.9"
   }
 }
-
-// mongodb+srv://admin:admin123@cluster0-bsp9s.mongodb.net/test?retryWrites=true&w=majority
