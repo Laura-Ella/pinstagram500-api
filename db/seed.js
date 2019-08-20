@@ -1,11 +1,13 @@
-const photoCollection = require("../db/photos.json")
+const photos = require("../db/photos.json")
 const Photos = require("../db/models/Photos")
+const Collection = require("../db/models/Collection")
+const collections = require("../db/collections.json")
 
-Photos.remove({})
+Photos.deleteMany({})
   .then(() => {
-    Photos.create(photoCollection)
-      .then((translations) => {
-        console.log(translations)
+    Photos.create(photos)
+      .then((photo) => {
+        console.log(photo)
         process.exit()
       })
   })
@@ -13,4 +15,14 @@ Photos.remove({})
     console.log(err)
   })
 
-
+  // Collection.deleteMany({})
+  // .then(() => {
+  //   Collection.create(collections)
+  //     .then((collection) => {
+  //       console.log(collection)
+  //       process.exit()
+  //     })
+  // })
+  // .catch((err) => {
+  //   console.log(err)
+  // })

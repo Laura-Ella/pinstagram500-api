@@ -4,10 +4,7 @@ const mongoose = require("../../db/connection");
 const Schema = mongoose.Schema;
 
 //require subschemas models
-let UserSchema = require("./User").schema
-
-
-
+// let UserSchema = require("./User").schema
 
 //create Photo Schema
 
@@ -16,11 +13,13 @@ let PhotoSchema = new Schema ({
     height: Number,
     likes: Number,
     description: String,
-    user: {UserSchema},
-    url: {
-        raw: String   
+    user: {
+        username: String,
     },
-    tag: String
+    urls: {
+        raw: String,
+    },
+    tag: String,
 });
 
 
