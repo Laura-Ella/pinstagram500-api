@@ -5,9 +5,8 @@ const app = express()
 app.use(parser.json())
 app.use(cors())
 
-app.use("/collection", require("../pinstagram500-api/db/routes/collections"))
-app.use("/", require("../pinstagram500-api/db/routes/photos"))
-app.use("/user", require("../pinstagram500-api/db/routes/user"))
+app.use("/collection", require("./db/routes/collections"))
+app.use("/photo", require("./db/routes/photos"))
 
 const PORT = process.env.PORT || 3000
 

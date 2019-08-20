@@ -4,7 +4,7 @@ const photoController = require("../controllers/photos")
 
 router.get("/", photoController.index)
 router.post("/", photoController.create)
-router.get("/:id", photoController.show); 
+// router.get("/:id", photoController.show); 
 router.put("/:id", photoController.update)
 router.delete("/:id", photoController.delete)
 
