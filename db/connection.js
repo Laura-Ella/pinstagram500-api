@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === "production") {
     mongoURI = "mongodb://localhost/pinstagram500";
   }
 
-mongoose.connect("mongoURI", {
+mongoose.connect(mongoURI, {
     useNewUrlParser: true
 })
 

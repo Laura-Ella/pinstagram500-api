@@ -20,6 +20,9 @@ Photos.deleteMany({}).then(newPhoto => {
   Photos.collection.insertMany(newPhotos).then(newPhoto => [
     console.log(newPhoto)
   ])
+})  
+.catch((err) => {
+  console.log(err)
 })
 
   Collection.deleteMany({})
