@@ -1,6 +1,6 @@
 const photos = require("../db/photos.json")
 const Photos = require("../db/models/Photos")
-const Collection = require("../db/models/Photos")
+const Collection = require("../db/models/Collection")
 const collections = require("../db/collections.json")
 
 let newPhotos = photos.map(photo => {
@@ -16,7 +16,7 @@ let newPhotos = photos.map(photo => {
   return x;
 });
 
-Photos.deleteMany({}).then(newPhotos => {
+Photos.deleteMany({}).then(newPhoto => {
   Photos.collection.insertMany(newPhotos).then(newPhoto => [
     console.log(newPhoto)
   ])
@@ -25,9 +25,9 @@ Photos.deleteMany({}).then(newPhotos => {
   Collection.deleteMany({})
   .then(() => {
     Collection.create(collections)
-      .then((collections) => {
-        console.log(collections)
-        // process.exit()
+      .then((collection) => {
+        console.log(collection)
+        process.exit()
       })
   })
   .catch((err) => {
