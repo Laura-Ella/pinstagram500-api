@@ -11,9 +11,9 @@ module.exports = {
     Photos.findById(req.params.id).then(photos => res.json(photos));
   },
   update: (req, res) => {
-    Photos.findOneAndUpdate({ _id: req.params.id }, req.body).then(photos =>
-      res.json(photos)
-    );
+    Photos.findOneAndUpdate({ _id: req.params.id }, req.body, {
+      new: true
+    }).then(photos => res.json(photos));
   },
   delete: (req, res) => {
     Photos.findOneAndDelete({ _id: req.params.id }).then(photos =>
