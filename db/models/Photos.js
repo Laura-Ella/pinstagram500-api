@@ -1,6 +1,6 @@
 //require dependencies
 
-const mongoose = require("../../db/connection");  
+const mongoose = require("../../db/connection");
 const Schema = mongoose.Schema;
 
 //require subschemas models
@@ -8,20 +8,15 @@ const Schema = mongoose.Schema;
 
 //create Photo Schema
 
-let PhotoSchema = new Schema ({
-    width: Number,
-    height: Number,
-    likes: Number,
-    description: String,
-    user: {
-        username: String,
-    },
-    urls: {
-        raw: String,
-    },
-    tag: String,
+let PhotoSchema = new Schema({
+  width: Number,
+  height: Number,
+  likes: Number,
+  description: String,
+  username: String,
+  url: String,
+  tag: String
 });
 
-
 //export module
-module.exports = mongoose.model("Photo", PhotoSchema) ;
+module.exports = mongoose.model("Photo", PhotoSchema);
