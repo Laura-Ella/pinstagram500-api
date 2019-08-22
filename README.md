@@ -67,3 +67,6 @@ If you wish to contribute to this project after contributing to the file, please
 
 Graditude goes to "Unsplash.com" for providing a public API of photo collections we could utilize to make this project possible.
 
+## Pinstagram API
+* https://pinstagram500-api.herokuapp.com/
+
