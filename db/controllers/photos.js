@@ -11,14 +11,18 @@ module.exports = {
     Photos.findById(req.params.id).then(photos => res.json(photos));
   },
   update: (req, res) => {
-    Photos.findOneAndUpdate({ _id: req.params.id }, req.body, {
-      new: true
-    }).then(photos => res.json(photos));
+    Photos.findOneAndUpdate(
+      { _id: req.params.id },
+      req.body,
+      { $inc: { likes: 1 } },
+      {
+        new: true
+      }
+    ).then(photos => res.json(photos));
   },
   update2: (req, res) => {
     Photos.findOneAndUpdate(
       { _id: req.params.id },
-      req.body,
       { $inc: { likes: 1 } },
       {
         new: true
