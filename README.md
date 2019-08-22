@@ -29,16 +29,16 @@ Pinstagram500 is an app which allows users to add photos and tag them based on t
 ## Approach taken
 * 1. One team member created a git Repository for the BackEnd
 * 2. Installed all the necessary dependencies
-* 2. Other team members cloned the repository
-* ALl team members created seperate branches and worked from that branch
+* 3. Other team members cloned the repository
+* 4. All team members created seperate branches and worked from that branch
   
-* Created index.js files and required all necessary dependencies
-* Created connection file and required necessary dependencies
-* Created Model Schemas (Photos, Collections, Users)
-* Created routes needed to access data
-* Added Create-Read-Update-Delete(CRUD) functionality in          Controllers folder
-* Tested CRUD functionality on the server by using Postman
-* Begin Working on FrontEnd(user Interface) of the applciation
+* 5. Created index.js files and required all necessary dependencies
+* 6. Created connection file and required necessary dependencies
+* 7. Created Model Schemas (Photos, Collections, Users)
+* 8. Created routes needed to access data
+* 9. Added Create-Read-Update-Delete(CRUD) functionality in          Controllers folder
+* 10. Tested CRUD functionality on the server by using Postman
+* 11. Begin Working on FrontEnd(user Interface) of the applciation
 
 
 ## Deployment instructions
