@@ -14,7 +14,7 @@ Pinstagram500 is an app which allows users to add photos and tag them based on t
 * Axios
 * Nodemon
 * Postman
-* Knowledgw on requesting API's
+* Understanding how to request API's
 
 ## Dependencies
 * axios
@@ -29,6 +29,7 @@ Pinstagram500 is an app which allows users to add photos and tag them based on t
 * Change into depository
 * Create new git branch
 * Install necessary dependencies
+   * npm install <dependency name>
 
 
 
@@ -42,7 +43,7 @@ Pinstagram500 is an app which allows users to add photos and tag them based on t
 * 6. Created connection file and required necessary dependencies
 * 7. Created Model Schemas (Photos, Collections, Users)
 * 8. Created routes needed to access data
-* 9. Added Create-Read-Update-Delete(CRUD) functionality in          Controllers folder
+* 9. Added Create-Read-Update-Delete(CRUD) functionality in Controllers folder
 * 10. Tested CRUD functionality on the server by using Postman
 * 11. Begin Working on FrontEnd(user Interface) of the applciation
 
